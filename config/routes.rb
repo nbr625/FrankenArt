@@ -1,4 +1,34 @@
 Rails.application.routes.draw do
+  get 'sessions/login'
+
+  get 'sessions/login_attempt'
+
+  get 'sessions/logout'
+
+  get 'sessions/home'
+
+  get 'sessions/profile'
+
+  get 'sessions/setting'
+
+  get 'searches/index'
+
+  resources :users
+
+  resources :photos
+
+  resources :carts
+
+  resources :reviews
+
+  resources :products
+
+  resources :categories
+
+  resources :books
+
+  resources :authors
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

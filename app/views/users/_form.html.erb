@@ -1,0 +1,49 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :display %><br>
+    <%= f.text_field :display %>
+  </div>
+  <div class="field">
+    <%= f.label :access %><br>
+    <%= f.number_field :access %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_file_name %><br>
+    <%= f.number_field :photo_file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_content_type %><br>
+    <%= f.number_field :photo_content_type %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_file_size %><br>
+    <%= f.number_field :photo_file_size %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_updated_at %><br>
+    <%= f.datetime_select :photo_updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

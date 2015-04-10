@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Display:</strong>
+  <%= @user.display %>
+</p>
+
+<p>
+  <strong>Access:</strong>
+  <%= @user.access %>
+</p>
+
+<p>
+  <strong>Photo file name:</strong>
+  <%= @user.photo_file_name %>
+</p>
+
+<p>
+  <strong>Photo content type:</strong>
+  <%= @user.photo_content_type %>
+</p>
+
+<p>
+  <strong>Photo file size:</strong>
+  <%= @user.photo_file_size %>
+</p>
+
+<p>
+  <strong>Photo updated at:</strong>
+  <%= @user.photo_updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
